@@ -63,7 +63,7 @@ tofire.addEventListener("touchstart",function(){
         sound.play();
 
     gsap.to(firediv, {
-        y: -800, // حرکت به سمت پایین
+        y: -600, // حرکت به سمت پایین
         duration: 1 // مدت زمان انیمیشن (مقدار را می‌توانید تغییر دهید)
     });
     setTimeout(() => {
