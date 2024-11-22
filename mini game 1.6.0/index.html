@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d2bb21f4a1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("Desktop/img/backgifgame.gif");
+            font-family: "Pixelify Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500; /* یا هر مقدار بین 400 تا 700 */
+            font-style: normal;
+        }
+        .just{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mybtn{
+            background-color: yellow;
+            width: 130px;
+            height: 60px;
+            border: 0;
+            border-radius: 10px;
+            font-size: large;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="just" style="color: yellow; font-size: 100px; margin: 100px;">
+        WELCOME!
+    </div>
+    <div class="just">
+        <button class="mybtn" id="startgameishere">
+            start game
+        </button>
+    </div>
+</body>
+<script>
+    document.getElementById("startgameishere").addEventListener("click", function () {
+    // بررسی نوع دستگاه
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isTablet = window.innerWidth > 600 && window.innerWidth <= 1024;
+
+    if (isMobile || isTablet) {
+        // هدایت به نسخه موبایل
+        window.location.href = "./Mobile/index.html";
+    } else {
+        // هدایت به نسخه دسکتاپ
+        window.location.href = "./Desktop/index.html";
+    }
+});
+</script>
+</html>
