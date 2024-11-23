@@ -40,7 +40,7 @@ function createattackermobile(){
     bodyis.appendChild(attaker)
 
     gsap.to(attaker,{
-        y:610,
+        y:510,
         duration:5,
     })
     setTimeout(() => {
